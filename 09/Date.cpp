@@ -192,7 +192,7 @@ Date& Date::operator+=(float months)
 Date& Date::operator-=(float months)
 {
     this->month = months;
-    while (this->month > 12) {
+    while (this->month < 0) {
         this->month -= 12;
         this->year--;
     }
@@ -209,5 +209,47 @@ Date& Date::operator-=(long years)
 {
     this->year -= years;
     return *this;
+}
+
+Date Date::operator+(int days) const&
+{
+    Date tmp = *this;
+    tmp += days;
+    return tmp;
+}
+
+Date Date::operator-(int days) const&
+{
+    Date tmp = *this;
+    tmp -= days;
+    return tmp;
+}
+
+Date Date::operator+(float months) const&
+{
+    Date tmp = *this;
+    tmp += months;
+    return tmp;
+}
+
+Date Date::operator-(float months) const&
+{
+    Date tmp = *this;
+    tmp -= months;
+    return tmp;
+}
+
+Date Date::operator+(long years) const&
+{
+    Date tmp = *this;
+    tmp += years;
+    return tmp;
+}
+
+Date Date::operator-(long years) const&
+{
+    Date tmp = *this;
+    tmp -= years;
+    return tmp; 
 }
 

@@ -48,5 +48,13 @@ public:
 	Date& operator -= (float months); // відняти months місяці від дати
 	Date& operator += (long years); // додати years років до дати
 	Date& operator -= (long years); // відняти years років від дати
+
+	//--------- АРИФМЕТИЧНІ ОПЕРАТОРИ ---------
+	Date operator + (int days)const&;
+	Date operator - (int days)const&;
+	Date operator + (float months)const&;
+	Date operator - (float months)const&;
+	Date operator + (long years)const&;
+	Date operator - (long years)const&;
 };
 
