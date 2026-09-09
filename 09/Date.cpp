@@ -119,3 +119,47 @@ string Date::toString() const
         std::to_string(year);
 }
 
+bool Date::operator==(const Date& obj) const&
+{
+    if (this->day == obj.day && this->month == obj.month && this->year == obj.year) {
+        return true;
+    }
+    else {return false;}
+}
+
+bool Date::operator!=(const Date& obj) const&
+{
+    return !(*this == obj);
+}
+
+bool Date::operator>(const Date& obj) const&
+{
+    if (this->year == obj.year) {
+        return true;
+    }
+    else if (this->year == obj.year && this->month > obj.month) {
+        return true;
+    }
+    else if (this->year == obj.year && this->month > obj.month && this->day == obj.day) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+bool Date::operator<(const Date& obj) const&
+{
+    return false;
+}
+
+bool Date::operator>=(const Date& obj) const&
+{
+    return false;
+}
+
+bool Date::operator<=(const Date& obj) const&
+{
+    return false;
+}
+

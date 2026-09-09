@@ -32,5 +32,13 @@ public:
 	void showDate()const;
 	bool valid()const; // Перевірка дати на коректність
 	string toString() const;
+
+	//--------- ОПЕРАТОРИ ПОРІВНЯННЯ ---------
+	bool operator == (const Date& obj)const&;
+	bool operator != (const Date& obj)const&;
+	bool operator > (const Date& obj)const&;
+	bool operator < (const Date& obj)const&;
+	bool operator >= (const Date& obj)const&;
+	bool operator <= (const Date& obj)const&;
 };
 
