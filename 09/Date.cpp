@@ -150,16 +150,16 @@ bool Date::operator>(const Date& obj) const&
 
 bool Date::operator<(const Date& obj) const&
 {
-    return false;
+    return !(*this > obj) && (*this != obj);
 }
 
 bool Date::operator>=(const Date& obj) const&
 {
-    return false;
+    return (*this > obj) || (*this != obj);
 }
 
 bool Date::operator<=(const Date& obj) const&
 {
-    return false;
+    return (*this > obj) || (*this != obj);
 }
 
