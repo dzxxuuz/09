@@ -18,4 +18,21 @@ int main(){
 	cout << d1.toString() << " < " << d2.toString() << " = " << boolalpha << (d1 < d2) << endl;
 	cout << d1.toString() << " >= " << d2.toString() << " = " << boolalpha << (d1 >= d2) << endl;
 	cout << d1.toString() << " <= " << d2.toString() << " = " << boolalpha << (d1 <= d2) << endl;
+
+	cout << "-------------------------" << endl;
+	cout << d1.toString() << " + 15 days = ";
+	d1 += 15;
+	cout << d1.toString() << endl;
+
+	cout << d1.toString() << " +15 months = ";
+	d1 -= 15.0f;
+	cout << d1.toString() << endl;
+
+	cout << d1.toString() << " +15 years= ";
+	d1 += 15L;
+	cout << d1.toString() << endl;
+
+	cout << d1.toString() << " + 15 days = ";
+	d1 += 15;
+	cout << d1.toString() << endl;
 }
